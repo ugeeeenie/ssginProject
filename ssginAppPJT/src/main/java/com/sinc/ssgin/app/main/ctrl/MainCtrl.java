@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainCtrl {
 	
-	@RequestMapping("/main.app")
+	@RequestMapping("intro.app")
 	public String main() {
 		System.out.println("MainCtrl main");
 		return "index";

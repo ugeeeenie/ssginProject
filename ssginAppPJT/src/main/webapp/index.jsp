@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 
 <script>
-	location.href="main.app";
+	location.href="intro.app";
 </script>

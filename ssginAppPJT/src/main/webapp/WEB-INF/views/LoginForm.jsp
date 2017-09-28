@@ -1,32 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
-    
+	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/resources/css/main.css" />
+<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/kfonts2.css" rel="stylesheet">
+
 </head>
 <!-- jQuery 2.1.4 -->
 <script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <body>
-	ssgin 로그인<br>
-	패스워드 삽입창<br>
-	<button>확인</button><br>
-	<button id="JoinBtn">PW 찾기/재설정</button>
-	
-	
-	
-	
+
+	<div>
+		ssgin 로그인<br> 
+		<input type=password placeholder="비밀번호"><br>
+		<button id="nextBtn">확인</button>
+		<br>
+		<button id="JoinBtn">PW 찾기/재설정</button>
+
+	</div>
+
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#JoinBtn").click(function(){
-				location.href="JoinForm.app";
+		$(document).ready(function() {
+			$("#JoinBtn").click(function() {
+				location.href = "JoinForm.app";
+			});
+			
+			$("#nextBtn").click(function(){
+				location.href="main.app";
 			});
 		});
-	
 	</script>
 </body>
 </html>
