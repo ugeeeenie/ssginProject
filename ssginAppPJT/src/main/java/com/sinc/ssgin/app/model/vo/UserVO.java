@@ -1,57 +1,41 @@
 package com.sinc.ssgin.app.model.vo;
 
 public class UserVO {
-	private String 	id, pwd, name;
-	private String 	sessionKey, sessionLimit;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getPwd() {
-		return pwd;
-	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getSessionKey() {
-		return sessionKey;
-	}
-	public void setSessionKey(String sessionKey) {
-		this.sessionKey = sessionKey;
-	}
-	public String getSessionLimit() {
-		return sessionLimit;
-	}
-	public void setSessionLimit(String sessionLimit) {
-		this.sessionLimit = sessionLimit;
-	}
+	//이름, 생년월일, 성별, 핸드폰번호, 
+	private int		user_no;
+	private String	hash;
+	//private String 	sessionKey, sessionLimit;
+	
 	public UserVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public UserVO(String id, String pwd, String name,
-			String sessionKey, String sessionLimit) {
+	
+	public UserVO(int user_no, String hash) {
 		super();
-		this.id = id;
-		this.pwd = pwd;
-		this.name = name;
-		this.sessionKey = sessionKey;
-		this.sessionLimit = sessionLimit;
+		this.user_no = user_no;
+		this.hash = hash;
 	}
+	
+	public int getUser_no() {
+		return user_no;
+	}
+	
+	public void setUser_no(int user_no) {
+		this.user_no = user_no;
+	}
+	
+	public String getHash() {
+		return hash;
+	}
+	
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+	
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", pwd=" + pwd + ", name="
-				+ name + ", sessionKey="
-				+ sessionKey
-				+ ", sessionLimit="
-				+ sessionLimit + "]";
+		return "UserVO [user_no=" + user_no + ", hash=" + hash
+				+ "]";
 	}
 }

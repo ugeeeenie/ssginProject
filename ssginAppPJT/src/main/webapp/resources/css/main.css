@@ -1599,7 +1599,7 @@
 			}
 
 	#header-wrapper {
-		background: url("../../../images/banner.jpg") center center;
+		background: url("/resources/images/banner.jpg") center center;
 		background-size: cover;
 	}
 
@@ -2404,7 +2404,7 @@
 
 		/* Off-Canvas Navigation */
 
-			#page-wrapper {
+/* 			#page-wrapper {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -2568,7 +2568,7 @@
 				-webkit-transform: translateX(0);
 				-ms-transform: translateX(0);
 				transform: translateX(0);
-			}
+			} */
 
 		/* Wrappers */
 

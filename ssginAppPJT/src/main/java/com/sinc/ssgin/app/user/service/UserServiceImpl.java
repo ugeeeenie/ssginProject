@@ -7,11 +7,12 @@ import org.springframework.stereotype.Service;
 import com.sinc.ssgin.app.model.vo.UserVO;
 import com.sinc.ssgin.app.user.dao.UserDao;
 
-@Service("Userservice")
+@Service("userService")
 public class UserServiceImpl implements UserService{
 
-	@Resource(name="Userdao")
+	@Resource(name="userDao")
 	private UserDao dao;
+	
 	@Override
 	public UserVO LoginServiceRow(UserVO user) {
 		// TODO Auto-generated method stub

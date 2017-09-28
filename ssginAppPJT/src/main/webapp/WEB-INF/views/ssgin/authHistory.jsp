@@ -31,7 +31,6 @@
         	유지은, 김한조, 한승우, 오민규
       </div>
       <hr>
-        
   </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
