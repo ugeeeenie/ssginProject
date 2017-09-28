@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.sinc.project.mapper.board">	<!-- namespace로 관리 가능 -->
+	<select id="list" parameterType="page" resultType="board">
+		SELECT * FROM (
+			SELECT ROWNUM rnum, A.* FROM 
+				(
+					SELECT 	*
+				 	FROM 	SPRING_BOARD_TBL
+				 	ORDER BY SEQ DESC
+				 ) A
+			WHERE ROWNUM <![CDATA[<]]>= #{endRowNum }
+		)
+		WHERE rnum <![CDATA[>]]>= #{startRowNum } 
+	</select>
+	
+	<select id="cnt" resultType="int">
+		SELECT	COUNT(*) CNT
+		FROM 	SPRING_BOARD_TBL
+	</select>
+	
+	<select id="read" parameterType="board" resultType="board">
+		SELECT 	*
+		FROM	SPRING_BOARD_TBL
+		WHERE	SEQ = #{seq}
+	</select>
+		
+</mapper>
