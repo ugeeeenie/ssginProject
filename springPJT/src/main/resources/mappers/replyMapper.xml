@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.sinc.project.mapper.reply">	<!-- namespace로 관리 가능 -->
+	<select id="list" parameterType="board" resultType="reply">
+		SELECT	*
+		FROM	SPRING_BOARD_REPLY_TBL
+		WHERE	SEQ = #{seq}
+		ORDER BY BNO DESC
+	</select>
+	
+	<insert id="insert" parameterType="reply">
+		INSERT 	INTO SPRING_BOARD_REPLY_TBL
+		VALUES	(SPRINGREPLYSEQ.NEXTVAL, #{author}, #{msg}, #{seq})
+	</insert>		
+</mapper>
